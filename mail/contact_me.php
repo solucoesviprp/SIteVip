@@ -56,14 +56,14 @@ try {
  
      //Define o remetente
      // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    
-     $mail->SetFrom('joao@solucoesvip.com.br', 'João'); //Seu e-mail
-     $mail->AddReplyTo('joao@solucoesvip.com.br', 'João'); //Seu e-mail
+     $mail->SetFrom('joao@solucoesvip.com.br', 'Email-Site'); //Seu e-mail
+     $mail->AddReplyTo('joao@solucoesvip.com.br', 'Email-Site'); //Seu e-mail
      $mail->Subject = 'Assunto: Email Site';//Assunto do e-mail
  
  
      //Define os destinatário(s)
      //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-     $mail->AddAddress('joao@solucoesvip.com.br', 'TESTE EMAIL SITE');
+     $mail->AddAddress('joao@solucoesvip.com.br', 'Email-Site');
  
      //Campos abaixo são opcionais 
      //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -73,7 +73,7 @@ try {
  
  
      //Define o corpo do email
-     $mail->MsgHTML('$message'); 
+     $mail->MsgHTML("Contato via Web Site<br />Nome: $name<br />Email: $email<br />Telefone: $phone<br />Deixou a seguinte menssagem:<br />$message"); 
  
      ////Caso queira colocar o conteudo de um arquivo utilize o método abaixo ao invés da mensagem no corpo do e-mail.
      //$mail->MsgHTML(file_get_contents('arquivo.html'));
