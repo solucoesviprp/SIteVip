@@ -38,7 +38,7 @@ if(empty($_POST['name'])      ||
 
 
 // Inclui o arquivo class.phpmailer.php localizado na pasta class
-require_once("class/class.phpmailer.php");
+require_once("../class/class.phpmailer.php");
  
 // Inicia a classe PHPMailer
 $mail = new PHPMailer(true);
@@ -77,8 +77,9 @@ try {
  
      ////Caso queira colocar o conteudo de um arquivo utilize o método abaixo ao invés da mensagem no corpo do e-mail.
      //$mail->MsgHTML(file_get_contents('arquivo.html'));
- 
+
      $mail->Send();
+
      return true;
  
     //caso apresente algum erro é apresentado abaixo com essa exceção.
